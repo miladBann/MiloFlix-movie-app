@@ -3,7 +3,7 @@ const movieContainer = document.querySelector(".movie_cont");
 
 async function showMovieInfo(movieID)
 {
-    const response = await fetch(`http://www.omdbapi.com/?apikey=45dff8d5&i=${movieID}&plot=full`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=45dff8d5&i=${movieID}&plot=full`);
     const data = await response.json();
 
     let movieHTML = `
