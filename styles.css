@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;;
+}
+
+.row1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*################################################*/
+/* header and Navigation bar*/
+
+#top_header {
+    background-color: black;
+    height: 40vh;
+    background-image: url("./assests/background.jpg");
+    background-size: cover;
+    background-position: 50%;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.container1 li {
+    list-style-type: none;
+}
+
+
+.container1 img {
+    width: 200px;
+    list-style-type: none;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_links {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0px 24px;
+}
+
+
+.nav_links li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.nav_links li a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(231, 231, 218);
+    color: beige;
+    text-underline-offset: 10px;
+    transition: all 300ms ease;
+}
+
+.special {
+    padding: 8px 18px;
+    border-radius: 50px;
+    background-color: rgb(95, 95, 95);
+}
+
+.seach_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 86px;
+    margin-top: 3%;
+}
+
+.seach_box h3 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.search_bar {
+    margin-top: 12px;
+    position: relative;
+    width: 50%;
+    height: 55%;
+}
+
+.search_bar input {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: rgb(14, 28, 28);
+    color: white;
+}
+
+.search_bar input::placeholder{
+    font-size: 18px;
+    color: rgb(164, 164, 164);
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: rgb(164, 164, 164);;
+    font-size: 24px;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+
+/*#################################################*/
+/* burger menu */
+.btn__menu {
+    background-color: transparent;
+    font-size: 26px;
+    text-align: center;
+    border: none;
+    color: white;
+    display: none;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.menu__backdrop {
+    border: 0.5px solid lightgray;
+    position: absolute;
+    background-color: #333333;
+    top: 3%;
+    right: 2%;
+    left: 50%;
+    bottom: 60%;
+    z-index: 100;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.menu__list {
+    padding: 16px 0px;
+    list-style-type: none;
+}
+
+.menu__link {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/*#################################################*/
+/* movies section */
+
+#movies {
+    background: linear-gradient(to right, #333333 20%, #4b8d45, rgb(167, 11, 11) );
+}
+
+.container2 h3 {
+    color: white;
+    font-size: 28px;
+    padding: 24px 0px;
+    text-align: center;
+}
+
+.movie_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: calc(100% / 4);  
+}
+
+.movie figure {
+    height: 80%;
+}
+
+.movie img {
+    scale: 0.9;
+    position: relative;
+    right: 12px;
+    border-radius: 10px;
+    transition: all 300ms ease;
+    cursor: pointer;
+    height: 100%;
+    width: 95%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.movie img:hover {
+    scale: 0.95;
+    transition: all 300ms ease;
+}
+
+.movie h4 {
+    color: white;
+    font-size: 20px;
+    margin: 0px 12px 4px 12px;
+}
+
+
+/*############################################################
+##############################################################
+##############################################################
+*/ /* responsive design for phones */
+
+@media (max-width: 768px)
+{
+    /* burger menu*/
+    .nav_links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+    /*##############################*/
+    /* section 1*/
+    .container1 img {
+        width: 150px;
+    }
+
+    .seach_box {
+        margin-top: 15%;
+    }
+
+    .seach_box h3 {
+        font-size: 22px;
+    }
+
+    .search_bar {
+        width: 70%;
+    }
+
+    .search_bar input {
+        width: 100%;
+    }
+
+    /*##############################*/
+    /* section 2*/
+
+    .container2 .search_result {
+        font-size: 22px;
+    }
+
+    .movie_wrapper {
+        padding-left: 24px;
+    }
+
+    .movie {
+        width: calc(100% / 2);   
+    }
+
+    .movie h4 {
+        color: white;
+        font-size: 18px;
+        margin: 0px 12px 4px 12px;
+    }
+
+}

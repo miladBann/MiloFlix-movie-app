@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ec3d9b334f.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <section id="top_header">
+        <div class="row1">
+            <div class="container1">
+                <nav>
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="./assests/logo.png" alt="">
+                            </figure>
+                        </li>
+
+                        <div class="nav_links">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Subscription</a></li>
+                            <li><a href="" class="special">Login</a></li>
+                        </div>
+
+                        <button class="btn__menu" onclick="openMenu()">
+                            <i class="fas fa-bars"></i>
+                        </button>
+            
+                        <div class="menu__backdrop">
+                            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <ul class="menu__links">
+                                <li class="menu__list"><a href="" class="menu__link" onclick="closeMenu()">Home</a></li>
+                                <li class="menu__list"><a href="" class="menu__link" onclick="closeMenu()">Subscription</a></li>
+                                <li class="menu__list"><a href="" class="menu__link special" onclick="closeMenu()">Login</a></li>
+                            </ul>
+                        </div>
+                    </ul>          
+                </nav>
+
+                <div class="seach_box">
+                    <h3>Search for movies</h3>
+                    
+                    <div class="search_bar">
+                        <input type="text" class="search" placeholder="Enter Movie Name...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="movies">
+        <div class="row1">
+            <div class="container2">
+                
+                <h3 class="search_result">Featured Movies</h3>
+                <div class="movie_wrapper">
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
